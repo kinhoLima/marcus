@@ -1,0 +1,219 @@
+<!--TESTE CLIQUE DIV -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+  <meta charset="utf-8">
+  <title>CURRICULUM</title>
+ <!--  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+ <body>
+  <div id="secao01" class="secao"> 
+<h1>
+<center><b>
+
+MARCUS VINICIUS DE LIMA</b></center> </h1>
+<br>
+<p>
+
+	
+	RUA ILHA BELA, 351 - CIDADE ARISTON<br> CARAPICUÍBA/SP, 06395-040<br>
+CELULAR: 11980996704 <br>
+E-MAIL: KINHO.MARCUS.KINHO@GMAIL.COM
+  </p>  
+  <span class="icone-scroll">
+  
+  <span class ="scroll-next scroll"> </span>
+  </span>
+  
+  </div>
+  
+  
+  <div id="secao02" class="secao">
+  <h2>EDUCAÇÃO E FORMAÇÃO</h2>
+  <p> 
+  ANÁLISE E DESENVOLVIMENTO DE SISTEMAS - ANHANGUERA
+         INÍCIO: JAN/2019 - TÉRMINO: JUN/2021<br>
+
+TÉCNICO EM INFORMÁTICA (PROGRAMAÇÃO) - INSTITUTO TÉCNICO DE BARUERI
+          INÍCIO: JUL/2015 - TÉRMINO: JUL/2017<br>
+
+ENSINO MÉDIO COMPLETO (EJA) - E.E. MARIA ALICE CRISSIUMA MESQUITA
+          TÉRMINO: DEZ/2014 </p>
+  <span class="icone-scroll">
+  <span class ="scroll-next scroll"> </span>
+  </span>
+  
+  </div>
+  
+  
+  <div id="secao03" class="secao"> 
+  
+  <h2>EXPERIÊNCIA PROFISSIONAL </h2>
+   <p> 
+  HIBERO EXTINTORES, CARAPICUÍBA - SP<br>
+ CARGO: PINTOR<br>
+ INÍCIO: SET/2011<br>
+          TÉRMINO: MAI/2019 </p>
+  <span class="icone-scroll">
+  <span class ="scroll-next scroll"> </span>
+  </span>
+  </div>
+  
+  
+  
+  <div id="secao04" class="secao"> 
+  
+  <h2> QUALIFICAÇÕES E ATIVIDADES PROFISSIONAIS</h2>
+		  
+		  <p> C#, JAVA, HTML5, ASP.NET, ECLIPSE ANDROID, ORACLE SQL 
+   </p>
+  <span class="icone-scroll">
+  <span class ="scroll-next scroll"> </span>
+  </span>
+  </div>
+  
+  <div id="secao05" class="secao"> 
+   <h2>OBJETIVO </h2>
+  <p> ESTÁGIO/TRAINEE EM DESENVOLVIMENTO DE SISTEMAS </p>
+  <span class="icone-scroll">
+  <span class ="scroll-top scroll"> </span>
+  </span>
+  
+  </div>
+  
+  
+  </body>
+  
+  <style>
+  body{
+  margin:0;
+  padding:0;
+  }
+  
+  p{
+  position:relative;
+  top:80px;
+  left:5px;
+  }
+  
+  h1{
+  position:relative;
+  top:10px;
+  left:5px;
+  }
+  
+  h2{
+  position:relative;
+  top:10px;
+  left:5px;
+  }
+  .secao{
+  position:relative;
+  height:100vh;
+  }
+  
+  #secao01{
+  background-color:#2E9AFE;
+  width: 100%;
+margin: 0;
+padding: 1px;
+  }
+  
+  #secao02{
+  background-color:#00BFFF;
+  width: 100%;
+margin: 1px 0;
+padding: 1px 0;
+  }
+  
+  #secao03{
+  background-color:#04B45F;
+  color:#fff;
+  width: 100%;
+margin: 1px0;
+padding:  1px 0;
+  }
+  
+  #secao04{
+  background-color:#F3F781;
+  width: 100%;
+margin: 0;
+padding:1px 0;
+  }
+   #secao05{
+  background-color:#FAAC58;
+  width: 100%;
+margin: 0;
+padding:1px 0;
+  }
+  
+ .icone-scroll{
+  position:absolute;
+  bottom:3em;
+  width:50px;
+  height:50px;
+  background-color:#1a1a1a;
+  border-radius: 50%;
+  left:50%;
+  margin-left:-25px;
+  cursor:pointer;
+  }
+  
+  .scroll{
+  width:15px;
+  height:15px;
+  border-right: 2px solid #fff;
+  border-bottom : 2px solid #fff;
+  display:inline-block;
+  position:relative;
+  }
+  
+  .scroll-next{
+  transform:rotate(45deg);
+  margin:14px 0 0 16.5px;
+  }
+  
+  .scroll-top{
+  transform:rotate(225deg);
+  margin:19px 0 0 17px;
+  }
+  
+  .scroll-top + .scroll-top{
+  top:-15px;
+  margin-top:0;
+  }
+  </style>
+  
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js"> </script>
+  <script>
+var _AlturaDocumento = $(window).height();
+function AlturaSecao(){
+$('.secao').height(_AlturaDocumento);
+}
+
+
+$(function(){
+
+   function ScrollSecao(){
+     // console.log('entrou');
+      var body = $('html, body');
+      
+      var secao = $(this).parent(".secao").next().offset().top;
+      
+      if($(this).parent('.secao').is('#secao05')){
+         body.animate({scrollTop: 0}, '800');
+      }else {
+         body.animate({scrollTop: secao}, '500');
+      }
+   }
+   
+   $('.icone-scroll').click(ScrollSecao);
+   
+});
+
+$('.icone-scroll').click(ScrollSecao);
+
+ 
+$(AlturaSecao);
+</script>
+</html>
